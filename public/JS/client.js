@@ -1,6 +1,6 @@
 console.log("client side JS file loaded")
 
-const url = 'http://localhost:3000/weather?address='
+const url = '/weather?address='
 
 //input
 const search = document.querySelector('input')

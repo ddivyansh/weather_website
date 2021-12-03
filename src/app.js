@@ -12,6 +12,9 @@ const publicDirectoryPath= path.join(__dirname,"../public")
 //making an express application
 const app = express()
 
+//to create a port for heruko to listen in or the localprt 3000
+const port = process.env.PORT || 3000 
+
 //changing the root folder & for serving static assets
 app.use(express.static(publicDirectoryPath))
 
@@ -93,6 +96,6 @@ app.get('*', (req, res)=> {
 })
 
 //now start the server
-app.listen(3000, ()=>{
-    console.log("The server is up & running")
+app.listen(port, ()=>{
+    console.log("The server is up & running at "+port)
 })
